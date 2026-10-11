@@ -44,7 +44,7 @@ def main() -> int:
             except json.JSONDecodeError:
                 record = {}
             if record.get("request_id") == args.request_id:
-                pull = git("pull", "-q", "--rebase", "origin", "main")
+                pull = git("pull", "-q", "--rebase", "--autostash", "origin", "main")
                 if pull.returncode != 0:
                     print(pull.stderr.strip(), file=sys.stderr)
                     print(json.dumps(record, indent=2))
