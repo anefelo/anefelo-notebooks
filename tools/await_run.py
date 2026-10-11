@@ -33,7 +33,8 @@ def main() -> int:
     folder = args.folder.rstrip("/")
     deadline = time.time() + args.timeout
     while True:
-        fetch = git("fetch", "-q", "origin", "main")
+        # Explicit refspec: clones of an empty or single-branch repo may not track origin/main on their own
+        fetch = git("fetch", "-q", "origin", "+refs/heads/main:refs/remotes/origin/main")
         if fetch.returncode != 0:
             print(fetch.stderr.strip(), file=sys.stderr)
         shown = git("show", f"origin/main:{folder}/_execution.json")
