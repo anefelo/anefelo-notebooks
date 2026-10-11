@@ -1,0 +1,75 @@
+{
+  "request_id": "dd59a62586644f0585f59ef5574ecd8c",
+  "notebook": "pipeline_check.ipynb",
+  "folder": "notebooks/0000-pipeline-check",
+  "started_at": "2026-10-11T11:45:09+00:00",
+  "runner": {
+    "python": "3.11.17",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39"
+  },
+  "duration_s": 17.6,
+  "nbconvert_returncode": 0,
+  "status": "ok",
+  "finished_at": "2026-10-11T11:45:27+00:00",
+  "files": [
+    "figures/fig1_thessaloniki_truecolor_ndvi.png",
+    "pipeline_check.ipynb",
+    "results/summary.json"
+  ],
+  "summary": {
+    "meta": {
+      "notebook": "pipeline_check.ipynb",
+      "generated_utc": "2026-10-11T11:45:27+00:00",
+      "inputs": {
+        "stac_url": "https://earth-search.aws.element84.com/v1",
+        "collection": "sentinel-2-c1-l2a",
+        "bbox": [
+          22.88,
+          40.61,
+          22.95,
+          40.66
+        ],
+        "start": "2026-07-13",
+        "end": "2026-10-11",
+        "max_cloud_pct": 20
+      }
+    },
+    "values": {
+      "scene_id": {
+        "value": "S2B_T34TFL_20260914T092025_L2A",
+        "unit": null,
+        "note": null
+      },
+      "scene_date": {
+        "value": "2026-09-14",
+        "unit": null,
+        "note": null
+      },
+      "scene_cloud_cover": {
+        "value": 0.0,
+        "unit": "%",
+        "note": "scene-level, from STAC metadata"
+      },
+      "chip_pixels": {
+        "value": 343072,
+        "unit": "pixels",
+        "note": "10 m pixels inside the bounding box"
+      },
+      "valid_fraction": {
+        "value": 0.9973,
+        "unit": "share",
+        "note": "clear land or water pixels per the SCL band"
+      },
+      "mean_ndvi_valid": {
+        "value": -0.0678,
+        "unit": "NDVI",
+        "note": "mean over valid pixels"
+      },
+      "vegetated_share": {
+        "value": 0.0623,
+        "unit": "share",
+        "note": "valid pixels with NDVI > 0.4"
+      }
+    }
+  }
+}
