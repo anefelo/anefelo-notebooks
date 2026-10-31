@@ -1,0 +1,331 @@
+{
+  "meta": {
+    "notebook": "cushing_blind_weeks.ipynb",
+    "generated_utc": "2026-10-31T23:53:01+00:00",
+    "inputs": {
+      "stac_url": "https://planetarycomputer.microsoft.com/api/stac/v1",
+      "s2_collection": "sentinel-2-l2a",
+      "s1_collection": "sentinel-1-grd",
+      "bbox": [
+        -96.8,
+        35.92,
+        -96.7,
+        36.01
+      ],
+      "use_osm_bbox": false,
+      "period": [
+        "2019-01-01",
+        "2025-12-31"
+      ],
+      "clear_threshold": 0.8,
+      "not_clear_scl_classes": [
+        0,
+        1,
+        3,
+        8,
+        9,
+        10
+      ],
+      "scl_res_m": 20,
+      "s1_mode": "IW",
+      "tile_cloud_usable_pct": 20
+    }
+  },
+  "values": {
+    "osm_tank_count": {
+      "value": 416,
+      "unit": "tanks",
+      "note": "OSM man_made=storage_tank within (-96.9, 35.85, -96.6, 36.1)"
+    },
+    "osm_tanks_inside_bbox_share": {
+      "value": 0.8654,
+      "unit": "share",
+      "note": "OSM tank centres falling inside BBOX"
+    },
+    "osm_derived_bbox": {
+      "value": [
+        -96.772,
+        35.92,
+        -96.71,
+        36.026
+      ],
+      "unit": "degrees (min_lon, min_lat, max_lon, max_lat)",
+      "note": "1st-99th percentile of tank centres plus 0.005 deg; for checking BBOX"
+    },
+    "aoi_bbox": {
+      "value": [
+        -96.8,
+        35.92,
+        -96.7,
+        36.01
+      ],
+      "unit": "degrees (min_lon, min_lat, max_lon, max_lat)",
+      "note": "WGS84; check against tank-farm extents before publishing"
+    },
+    "weeks_total": {
+      "value": 365,
+      "unit": "ISO weeks",
+      "note": "ISO weeks with Thursday in 2019-01-01..2025-12-31"
+    },
+    "s2_scenes": {
+      "value": 1196,
+      "unit": "scenes",
+      "note": "Sentinel-2 L2A items touching the AOI (tiles counted separately)"
+    },
+    "s2_scl_read_failures": {
+      "value": 0,
+      "unit": "scenes",
+      "note": "excluded from the weekly roll-up"
+    },
+    "s2_scene_usable_share": {
+      "value": 0.4164,
+      "unit": "share of scenes",
+      "note": "scenes with >= 80% of AOI pixels clear (SCL not in [0, 1, 3, 8, 9, 10])"
+    },
+    "share_weeks_usable": {
+      "value": 0.5863,
+      "unit": "share of weeks",
+      "note": "weeks with at least one Sentinel-2 acquisition >= 80% clear over the AOI"
+    },
+    "weeks_usable": {
+      "value": 214,
+      "unit": "ISO weeks",
+      "note": null
+    },
+    "weeks_blind": {
+      "value": 151,
+      "unit": "ISO weeks",
+      "note": "no usable optical look (cloudy or no acquisition)"
+    },
+    "weeks_no_s2_acquisition": {
+      "value": 4,
+      "unit": "ISO weeks",
+      "note": "no Sentinel-2 acquisition at all (cadence gap)"
+    },
+    "longest_blind_run_overall": {
+      "value": 4,
+      "unit": "consecutive ISO weeks",
+      "note": "across year boundaries"
+    },
+    "share_weeks_usable_2019": {
+      "value": 0.5577,
+      "unit": "share of weeks",
+      "note": "ISO year 2019"
+    },
+    "longest_blind_run_2019": {
+      "value": 3,
+      "unit": "consecutive ISO weeks",
+      "note": "within ISO year 2019 (runs cut at year boundary)"
+    },
+    "s2_looks_2019": {
+      "value": 142,
+      "unit": "scenes",
+      "note": "Sentinel-2 scenes read in ISO year 2019; drops when only one satellite flew"
+    },
+    "share_weeks_usable_2020": {
+      "value": 0.6226,
+      "unit": "share of weeks",
+      "note": "ISO year 2020"
+    },
+    "longest_blind_run_2020": {
+      "value": 4,
+      "unit": "consecutive ISO weeks",
+      "note": "within ISO year 2020 (runs cut at year boundary)"
+    },
+    "s2_looks_2020": {
+      "value": 147,
+      "unit": "scenes",
+      "note": "Sentinel-2 scenes read in ISO year 2020; drops when only one satellite flew"
+    },
+    "share_weeks_usable_2021": {
+      "value": 0.5577,
+      "unit": "share of weeks",
+      "note": "ISO year 2021"
+    },
+    "longest_blind_run_2021": {
+      "value": 4,
+      "unit": "consecutive ISO weeks",
+      "note": "within ISO year 2021 (runs cut at year boundary)"
+    },
+    "s2_looks_2021": {
+      "value": 140,
+      "unit": "scenes",
+      "note": "Sentinel-2 scenes read in ISO year 2021; drops when only one satellite flew"
+    },
+    "share_weeks_usable_2022": {
+      "value": 0.6154,
+      "unit": "share of weeks",
+      "note": "ISO year 2022"
+    },
+    "longest_blind_run_2022": {
+      "value": 4,
+      "unit": "consecutive ISO weeks",
+      "note": "within ISO year 2022 (runs cut at year boundary)"
+    },
+    "s2_looks_2022": {
+      "value": 206,
+      "unit": "scenes",
+      "note": "Sentinel-2 scenes read in ISO year 2022; drops when only one satellite flew"
+    },
+    "share_weeks_usable_2023": {
+      "value": 0.5192,
+      "unit": "share of weeks",
+      "note": "ISO year 2023"
+    },
+    "longest_blind_run_2023": {
+      "value": 3,
+      "unit": "consecutive ISO weeks",
+      "note": "within ISO year 2023 (runs cut at year boundary)"
+    },
+    "s2_looks_2023": {
+      "value": 244,
+      "unit": "scenes",
+      "note": "Sentinel-2 scenes read in ISO year 2023; drops when only one satellite flew"
+    },
+    "share_weeks_usable_2024": {
+      "value": 0.6154,
+      "unit": "share of weeks",
+      "note": "ISO year 2024"
+    },
+    "longest_blind_run_2024": {
+      "value": 4,
+      "unit": "consecutive ISO weeks",
+      "note": "within ISO year 2024 (runs cut at year boundary)"
+    },
+    "s2_looks_2024": {
+      "value": 144,
+      "unit": "scenes",
+      "note": "Sentinel-2 scenes read in ISO year 2024; drops when only one satellite flew"
+    },
+    "share_weeks_usable_2025": {
+      "value": 0.6154,
+      "unit": "share of weeks",
+      "note": "ISO year 2025"
+    },
+    "longest_blind_run_2025": {
+      "value": 4,
+      "unit": "consecutive ISO weeks",
+      "note": "within ISO year 2025 (runs cut at year boundary)"
+    },
+    "s2_looks_2025": {
+      "value": 173,
+      "unit": "scenes",
+      "note": "Sentinel-2 scenes read in ISO year 2025; drops when only one satellite flew"
+    },
+    "share_weeks_usable_jan": {
+      "value": 0.4839,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 1, all years (31 weeks)"
+    },
+    "share_weeks_usable_feb": {
+      "value": 0.5862,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 2, all years (29 weeks)"
+    },
+    "share_weeks_usable_mar": {
+      "value": 0.6,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 3, all years (30 weeks)"
+    },
+    "share_weeks_usable_apr": {
+      "value": 0.4333,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 4, all years (30 weeks)"
+    },
+    "share_weeks_usable_may": {
+      "value": 0.4516,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 5, all years (31 weeks)"
+    },
+    "share_weeks_usable_jun": {
+      "value": 0.6333,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 6, all years (30 weeks)"
+    },
+    "share_weeks_usable_jul": {
+      "value": 0.5806,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 7, all years (31 weeks)"
+    },
+    "share_weeks_usable_aug": {
+      "value": 0.5484,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 8, all years (31 weeks)"
+    },
+    "share_weeks_usable_sep": {
+      "value": 0.7,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 9, all years (30 weeks)"
+    },
+    "share_weeks_usable_oct": {
+      "value": 0.7188,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 10, all years (32 weeks)"
+    },
+    "share_weeks_usable_nov": {
+      "value": 0.6207,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 11, all years (29 weeks)"
+    },
+    "share_weeks_usable_dec": {
+      "value": 0.6774,
+      "unit": "share of weeks",
+      "note": "weeks whose Thursday falls in month 12, all years (31 weeks)"
+    },
+    "s1_acq_per_week_mean": {
+      "value": 0.926,
+      "unit": "acquisitions per week",
+      "note": "distinct Sentinel-1 IW GRD passes (unique platform+absolute orbit) touching the AOI; counts only"
+    },
+    "s1_share_weeks_with_acq": {
+      "value": 0.8219,
+      "unit": "share of weeks",
+      "note": "weeks with >= 1 Sentinel-1 IW acquisition; radar is cloud-independent"
+    },
+    "s1_acq_per_week_mean_2019": {
+      "value": 1.0,
+      "unit": "acquisitions per week",
+      "note": "ISO year 2019"
+    },
+    "s1_acq_per_week_mean_2020": {
+      "value": 1.019,
+      "unit": "acquisitions per week",
+      "note": "ISO year 2020"
+    },
+    "s1_acq_per_week_mean_2021": {
+      "value": 1.077,
+      "unit": "acquisitions per week",
+      "note": "ISO year 2021"
+    },
+    "s1_acq_per_week_mean_2022": {
+      "value": 0.538,
+      "unit": "acquisitions per week",
+      "note": "ISO year 2022"
+    },
+    "s1_acq_per_week_mean_2023": {
+      "value": 0.75,
+      "unit": "acquisitions per week",
+      "note": "ISO year 2023"
+    },
+    "s1_acq_per_week_mean_2024": {
+      "value": 0.942,
+      "unit": "acquisitions per week",
+      "note": "ISO year 2024"
+    },
+    "s1_acq_per_week_mean_2025": {
+      "value": 1.154,
+      "unit": "acquisitions per week",
+      "note": "ISO year 2025"
+    },
+    "share_weeks_usable_tile_rule": {
+      "value": 0.6027,
+      "unit": "share of weeks",
+      "note": "secondary: weeks with a scene whose tile-level eo:cloud_cover <= 20%"
+    },
+    "agreement_aoi_vs_tile_rule": {
+      "value": 0.8904,
+      "unit": "share of weeks",
+      "note": "weeks where the AOI-level and tile-level rules agree"
+    }
+  }
+}
