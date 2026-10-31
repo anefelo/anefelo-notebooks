@@ -1,16 +1,16 @@
 {
   "meta": {
     "notebook": "cushing_blind_weeks.ipynb",
-    "generated_utc": "2026-10-31T23:53:01+00:00",
+    "generated_utc": "2026-10-31T23:56:17+00:00",
     "inputs": {
       "stac_url": "https://planetarycomputer.microsoft.com/api/stac/v1",
       "s2_collection": "sentinel-2-l2a",
       "s1_collection": "sentinel-1-grd",
       "bbox": [
-        -96.8,
+        -96.772,
         35.92,
-        -96.7,
-        36.01
+        -96.71,
+        36.026
       ],
       "use_osm_bbox": false,
       "period": [
@@ -38,7 +38,7 @@
       "note": "OSM man_made=storage_tank within (-96.9, 35.85, -96.6, 36.1)"
     },
     "osm_tanks_inside_bbox_share": {
-      "value": 0.8654,
+      "value": 0.9976,
       "unit": "share",
       "note": "OSM tank centres falling inside BBOX"
     },
@@ -54,13 +54,13 @@
     },
     "aoi_bbox": {
       "value": [
-        -96.8,
+        -96.772,
         35.92,
-        -96.7,
-        36.01
+        -96.71,
+        36.026
       ],
       "unit": "degrees (min_lon, min_lat, max_lon, max_lat)",
-      "note": "WGS84; check against tank-farm extents before publishing"
+      "note": "WGS84; OSM storage-tank extent (section 3a)"
     },
     "weeks_total": {
       "value": 365,
@@ -78,22 +78,22 @@
       "note": "excluded from the weekly roll-up"
     },
     "s2_scene_usable_share": {
-      "value": 0.4164,
+      "value": 0.4866,
       "unit": "share of scenes",
       "note": "scenes with >= 80% of AOI pixels clear (SCL not in [0, 1, 3, 8, 9, 10])"
     },
     "share_weeks_usable": {
-      "value": 0.5863,
+      "value": 0.5918,
       "unit": "share of weeks",
       "note": "weeks with at least one Sentinel-2 acquisition >= 80% clear over the AOI"
     },
     "weeks_usable": {
-      "value": 214,
+      "value": 216,
       "unit": "ISO weeks",
       "note": null
     },
     "weeks_blind": {
-      "value": 151,
+      "value": 149,
       "unit": "ISO weeks",
       "note": "no usable optical look (cloudy or no acquisition)"
     },
@@ -103,12 +103,12 @@
       "note": "no Sentinel-2 acquisition at all (cadence gap)"
     },
     "longest_blind_run_overall": {
-      "value": 4,
+      "value": 5,
       "unit": "consecutive ISO weeks",
       "note": "across year boundaries"
     },
     "share_weeks_usable_2019": {
-      "value": 0.5577,
+      "value": 0.5962,
       "unit": "share of weeks",
       "note": "ISO year 2019"
     },
@@ -213,7 +213,7 @@
       "note": "Sentinel-2 scenes read in ISO year 2025; drops when only one satellite flew"
     },
     "share_weeks_usable_jan": {
-      "value": 0.4839,
+      "value": 0.5161,
       "unit": "share of weeks",
       "note": "weeks whose Thursday falls in month 1, all years (31 weeks)"
     },
@@ -233,7 +233,7 @@
       "note": "weeks whose Thursday falls in month 4, all years (30 weeks)"
     },
     "share_weeks_usable_may": {
-      "value": 0.4516,
+      "value": 0.4839,
       "unit": "share of weeks",
       "note": "weeks whose Thursday falls in month 5, all years (31 weeks)"
     },
@@ -248,7 +248,7 @@
       "note": "weeks whose Thursday falls in month 7, all years (31 weeks)"
     },
     "share_weeks_usable_aug": {
-      "value": 0.5484,
+      "value": 0.5806,
       "unit": "share of weeks",
       "note": "weeks whose Thursday falls in month 8, all years (31 weeks)"
     },
@@ -268,7 +268,7 @@
       "note": "weeks whose Thursday falls in month 11, all years (29 weeks)"
     },
     "share_weeks_usable_dec": {
-      "value": 0.6774,
+      "value": 0.6452,
       "unit": "share of weeks",
       "note": "weeks whose Thursday falls in month 12, all years (31 weeks)"
     },
