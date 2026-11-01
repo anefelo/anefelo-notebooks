@@ -1,7 +1,7 @@
 {
   "meta": {
     "notebook": "cushing_blind_weeks.ipynb",
-    "generated_utc": "2026-10-31T23:56:17+00:00",
+    "generated_utc": "2026-11-01T00:07:50+00:00",
     "inputs": {
       "stac_url": "https://planetarycomputer.microsoft.com/api/stac/v1",
       "s2_collection": "sentinel-2-l2a",
@@ -32,26 +32,6 @@
     }
   },
   "values": {
-    "osm_tank_count": {
-      "value": 416,
-      "unit": "tanks",
-      "note": "OSM man_made=storage_tank within (-96.9, 35.85, -96.6, 36.1)"
-    },
-    "osm_tanks_inside_bbox_share": {
-      "value": 0.9976,
-      "unit": "share",
-      "note": "OSM tank centres falling inside BBOX"
-    },
-    "osm_derived_bbox": {
-      "value": [
-        -96.772,
-        35.92,
-        -96.71,
-        36.026
-      ],
-      "unit": "degrees (min_lon, min_lat, max_lon, max_lat)",
-      "note": "1st-99th percentile of tank centres plus 0.005 deg; for checking BBOX"
-    },
     "aoi_bbox": {
       "value": [
         -96.772,
@@ -61,6 +41,16 @@
       ],
       "unit": "degrees (min_lon, min_lat, max_lon, max_lat)",
       "note": "WGS84; OSM storage-tank extent (section 3a)"
+    },
+    "s2_items_sharing_tile_overpass": {
+      "value": 340,
+      "unit": "scenes",
+      "note": "Sentinel-2 items whose MGRS tile and overpass minute match another item"
+    },
+    "s2_distinct_tile_overpasses": {
+      "value": 1026,
+      "unit": "scenes",
+      "note": "distinct MGRS tile + overpass pairs"
     },
     "weeks_total": {
       "value": 365,
