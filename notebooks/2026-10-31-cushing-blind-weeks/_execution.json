@@ -1,16 +1,16 @@
 {
-  "request_id": "1e302a58bd3145f892aff98410076859",
+  "request_id": "6c993acca22b4f88af586e4f390f57c8",
   "notebook": "cushing_blind_weeks.ipynb",
   "folder": "notebooks/2026-10-31-cushing-blind-weeks",
-  "started_at": "2026-11-01T00:18:52+00:00",
+  "started_at": "2026-11-01T00:22:16+00:00",
   "runner": {
     "python": "3.11.17",
     "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39"
   },
-  "duration_s": 95.2,
+  "duration_s": 100.9,
   "nbconvert_returncode": 0,
   "status": "ok",
-  "finished_at": "2026-11-01T00:20:27+00:00",
+  "finished_at": "2026-11-01T00:23:57+00:00",
   "files": [
     "cushing_blind_weeks.ipynb",
     "figures/fig1_cushing_usable_weeks_calendar.png",
@@ -21,7 +21,7 @@
   "summary": {
     "meta": {
       "notebook": "cushing_blind_weeks.ipynb",
-      "generated_utc": "2026-11-01T00:20:26+00:00",
+      "generated_utc": "2026-11-01T00:23:56+00:00",
       "inputs": {
         "stac_url": "https://planetarycomputer.microsoft.com/api/stac/v1",
         "s2_collection": "sentinel-2-l2a",

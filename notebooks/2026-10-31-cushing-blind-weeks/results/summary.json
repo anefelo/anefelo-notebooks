@@ -1,7 +1,7 @@
 {
   "meta": {
     "notebook": "cushing_blind_weeks.ipynb",
-    "generated_utc": "2026-11-01T00:20:26+00:00",
+    "generated_utc": "2026-11-01T00:23:56+00:00",
     "inputs": {
       "stac_url": "https://planetarycomputer.microsoft.com/api/stac/v1",
       "s2_collection": "sentinel-2-l2a",
