@@ -1,7 +1,7 @@
 {
   "meta": {
     "notebook": "cushing_blind_weeks.ipynb",
-    "generated_utc": "2026-11-01T00:10:33+00:00",
+    "generated_utc": "2026-11-01T00:20:26+00:00",
     "inputs": {
       "stac_url": "https://planetarycomputer.microsoft.com/api/stac/v1",
       "s2_collection": "sentinel-2-l2a",
@@ -32,6 +32,26 @@
     }
   },
   "values": {
+    "osm_tank_count": {
+      "value": 416,
+      "unit": "tanks",
+      "note": "OSM man_made=storage_tank within (-96.9, 35.85, -96.6, 36.1)"
+    },
+    "osm_tanks_inside_bbox_share": {
+      "value": 0.9976,
+      "unit": "share",
+      "note": "OSM tank centres falling inside BBOX"
+    },
+    "osm_derived_bbox": {
+      "value": [
+        -96.772,
+        35.92,
+        -96.71,
+        36.026
+      ],
+      "unit": "degrees (min_lon, min_lat, max_lon, max_lat)",
+      "note": "1st-99th percentile of tank centres plus 0.005 deg; for checking BBOX"
+    },
     "aoi_bbox": {
       "value": [
         -96.772,
@@ -316,6 +336,26 @@
       "value": 0.8904,
       "unit": "share of weeks",
       "note": "weeks where the AOI-level and tile-level rules agree"
+    },
+    "header_clear_date": {
+      "value": "2025-10-05",
+      "unit": "date (UTC)",
+      "note": "clear look: S2C_MSIL2A_20251005T171211_R112_T14SPE_20251005T215214"
+    },
+    "header_clear_aoi_clear_share": {
+      "value": 1.0,
+      "unit": "share of box pixels",
+      "note": "clear look, SCL not in NOT_CLEAR_SCL"
+    },
+    "header_cloudy_date": {
+      "value": "2025-10-25",
+      "unit": "date (UTC)",
+      "note": "cloudy look: S2C_MSIL2A_20251025T171421_R112_T14SPE_20251025T204723"
+    },
+    "header_cloudy_aoi_cloud_share": {
+      "value": 1.0,
+      "unit": "share of box pixels",
+      "note": "cloudy look, SCL 8, 9, 10"
     }
   }
 }
